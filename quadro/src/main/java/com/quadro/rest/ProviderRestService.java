@@ -2,11 +2,12 @@ package com.quadro.rest;
 
 import com.quadro.entity.Channel;
 import com.quadro.mgmt.ChannelsManager;
+
 import com.sun.jersey.api.core.InjectParam;
 import org.bson.types.ObjectId;
 
 import javax.ws.rs.*;
-import java.util.List;
+
 
 /**
  * Created by Achia.Rifman on 03/06/2014.

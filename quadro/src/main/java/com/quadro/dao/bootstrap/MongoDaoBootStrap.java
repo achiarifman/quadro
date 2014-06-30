@@ -24,6 +24,9 @@ public class MongoDaoBootStrap {
     @Value("#{props['mongo.port']}")
     String mongoPort;
 
+    @Value("#{props['mongo.morphia.package']}")
+    String morphiaPackage;
+
     @Bean(name = "mongo")
     public Mongo mongo() {
 
@@ -42,7 +45,7 @@ public class MongoDaoBootStrap {
     public Morphia morphia() {
 
         Morphia morphia = new Morphia();
-        morphia.mapPackage("com.quadro.entity");
+        morphia.mapPackage(morphiaPackage);
         return morphia;
 
     }
